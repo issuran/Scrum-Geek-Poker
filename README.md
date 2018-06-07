@@ -1,4 +1,4 @@
-# Scrum-Geek-Poker :page_facing_up:
+# Scrum Geek Poker :page_facing_up:
 Display cards for Scrum Poker
 
 # What is it?
