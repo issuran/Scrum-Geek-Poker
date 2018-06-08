@@ -16,7 +16,6 @@ class CardViewController: UIViewController {
     @IBOutlet weak var leadingConstrant: NSLayoutConstraint!
     @IBOutlet weak var mainView: UIView!
     
-    var isMenuOpen = false
     var cardViewModel = CardViewModel()
     var menuViewModel = MenuViewModel()
     
@@ -33,11 +32,6 @@ class CardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         trailingConstrant.constant = menuViewModel.getTrailingValue()
         leadingConstrant.constant = menuViewModel.getLeadingValue()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
     }
     
     @IBAction func flipCard(_ sender: Any) {

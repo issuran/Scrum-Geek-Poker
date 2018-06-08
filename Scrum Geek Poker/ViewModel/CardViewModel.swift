@@ -28,7 +28,6 @@ class CardViewModel: NSObject {
             self.isOpen = true
             self.image = UIImage(named: "front_card")!
         }
-        
     }
     
     func getImageToDisplay() -> UIImage{
