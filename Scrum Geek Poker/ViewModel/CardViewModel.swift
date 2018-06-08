@@ -7,18 +7,17 @@
 //
 
 import UIKit
-import NotificationCenter
 
 class CardViewModel: NSObject {
     
-    var isOpen: Bool
-    var image: UIImage
-    var duration: Double
+    private var isOpen: Bool
+    private var image: UIImage
+    private var duration: Double
     
     override init() {
         self.isOpen = false
         self.image = UIImage(named: "back_card")!
-        self.duration = 0.5
+        self.duration = 0.3
     }
     
     func flipCardToDisplay() {
@@ -39,8 +38,4 @@ class CardViewModel: NSObject {
     func getDurationOfTransition() -> Double{
         return duration
     }
-}
-
-extension Notification.Name{
-    static let FlipCardDidProcessToDisplay = NSNotification.Name("FlipCardDidProcessToDisplay")
 }
