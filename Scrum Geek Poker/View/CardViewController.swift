@@ -40,7 +40,7 @@ class CardViewController: UIViewController {
     
         btnCard.setImage(cardViewModel.getImageToDisplay(), for: .normal)
         
-        UIView.transition(with: btnCard, duration: cardViewModel.getDurationOfTransition(), options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        UIView.transition(with: btnCard, duration: cardViewModel.getDurationOfTransition(), options: cardViewModel.getMovementAnimation(), animations: nil, completion: nil)
     }
     
     @IBAction func openMenu(_ sender: Any) {
@@ -50,7 +50,7 @@ class CardViewController: UIViewController {
         trailingConstrant.constant = menuViewModel.getTrailingValue()
         leadingConstrant.constant = menuViewModel.getLeadingValue()
         
-        UIView.animate(withDuration: menuViewModel.getDurationValue(), animations:{
+        UIView.animate(withDuration: menuViewModel.getDurationValue(), animations: {
             self.view.layoutIfNeeded()
             
         })
