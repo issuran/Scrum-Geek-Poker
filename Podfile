@@ -7,6 +7,4 @@ target 'Scrum Geek Poker' do
 
   # Pods for Scrum Geek Poker
 
-pod 'MaterialComponents/BottomSheet'
-
 end
