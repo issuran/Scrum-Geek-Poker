@@ -10,8 +10,10 @@ import UIKit
 
 private let reuseIdentifier = "CardCell"
 
-class CardsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class CardsCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     var cardsViewModel = CardsViewModel()
     let itemsPerRow: CGFloat = 3
     let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
@@ -25,6 +27,9 @@ class CardsCollectionViewController: UICollectionViewController, UICollectionVie
         // Register cell classes
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         // Do any additional setup after loading the view.
     }
@@ -45,19 +50,20 @@ class CardsCollectionViewController: UICollectionViewController, UICollectionVie
     */
 
     // MARK: UICollectionViewDataSource
+    
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return cardsViewModel.getNumberOfSections()
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return cardsViewModel.getNumberOfItemsInSection()
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         return cell

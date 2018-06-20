@@ -1,0 +1,22 @@
+PODS:
+  - MaterialComponents/BottomSheet (55.2.0):
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (55.2.0)
+  - MaterialComponents/private/KeyboardWatcher (55.2.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (55.2.0)
+
+DEPENDENCIES:
+  - MaterialComponents/BottomSheet
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MaterialComponents
+
+SPEC CHECKSUMS:
+  MaterialComponents: b321a90d9746ac7be2e5da3f8497c5aa15b1f761
+
+PODFILE CHECKSUM: 004ac5adf8e2508aa60e7bd58bc3b5060b95a407
+
+COCOAPODS: 1.5.2
