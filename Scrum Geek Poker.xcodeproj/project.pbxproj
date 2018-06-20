@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5223BF3D20D9F92C00328C58 /* BottomMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223BF3B20D9F92C00328C58 /* BottomMenuViewController.swift */; };
+		5223BF3E20D9F92C00328C58 /* BottomMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5223BF3C20D9F92C00328C58 /* BottomMenuViewController.xib */; };
+		5223BF4120D9FAA700328C58 /* BottomMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223BF3F20D9FAA700328C58 /* BottomMenuItemViewController.swift */; };
+		5223BF4220D9FAA700328C58 /* BottomMenuItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5223BF4020D9FAA700328C58 /* BottomMenuItemViewController.xib */; };
 		5240441920CF3FB300B63FFD /* CardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240441820CF3FB300B63FFD /* CardsCollectionViewController.swift */; };
 		5240442020CF40C200B63FFD /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240441F20CF40C200B63FFD /* CardsViewModel.swift */; };
 		5240442320CF4EA300B63FFD /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240442120CF4EA300B63FFD /* CardCollectionViewCell.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5223BF3B20D9F92C00328C58 /* BottomMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenuViewController.swift; sourceTree = "<group>"; };
+		5223BF3C20D9F92C00328C58 /* BottomMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomMenuViewController.xib; sourceTree = "<group>"; };
+		5223BF3F20D9FAA700328C58 /* BottomMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenuItemViewController.swift; sourceTree = "<group>"; };
+		5223BF4020D9FAA700328C58 /* BottomMenuItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomMenuItemViewController.xib; sourceTree = "<group>"; };
 		5240441820CF3FB300B63FFD /* CardsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewController.swift; sourceTree = "<group>"; };
 		5240441F20CF40C200B63FFD /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
 		5240442120CF4EA300B63FFD /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -54,9 +62,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5223BF3820D9F8F100328C58 /* BottomMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5223BF3A20D9F90C00328C58 /* Menu */,
+				5223BF3920D9F90000328C58 /* Item */,
+			);
+			path = BottomMenu;
+			sourceTree = "<group>";
+		};
+		5223BF3920D9F90000328C58 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				5223BF3F20D9FAA700328C58 /* BottomMenuItemViewController.swift */,
+				5223BF4020D9FAA700328C58 /* BottomMenuItemViewController.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		5223BF3A20D9F90C00328C58 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5223BF3B20D9F92C00328C58 /* BottomMenuViewController.swift */,
+				5223BF3C20D9F92C00328C58 /* BottomMenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		5240441A20CF404600B63FFD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				5223BF3820D9F8F100328C58 /* BottomMenu */,
 				5240441C20CF406C00B63FFD /* CardSelected */,
 				5240441B20CF405A00B63FFD /* CardCollection */,
 			);
@@ -233,9 +269,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5223BF3E20D9F92C00328C58 /* BottomMenuViewController.xib in Resources */,
 				5240442420CF4EA300B63FFD /* CardCollectionViewCell.xib in Resources */,
 				5253001020C8C1A000B3344C /* LaunchScreen.storyboard in Resources */,
 				5253000D20C8C1A000B3344C /* Assets.xcassets in Resources */,
+				5223BF4220D9FAA700328C58 /* BottomMenuItemViewController.xib in Resources */,
 				5253000B20C8C19F00B3344C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +327,9 @@
 				5253000820C8C19F00B3344C /* CardViewController.swift in Sources */,
 				5253000620C8C19F00B3344C /* AppDelegate.swift in Sources */,
 				5240442020CF40C200B63FFD /* CardsViewModel.swift in Sources */,
+				5223BF3D20D9F92C00328C58 /* BottomMenuViewController.swift in Sources */,
 				5253001A20C8CA4700B3344C /* CardViewModel.swift in Sources */,
+				5223BF4120D9FAA700328C58 /* BottomMenuItemViewController.swift in Sources */,
 				5240442320CF4EA300B63FFD /* CardCollectionViewCell.swift in Sources */,
 				52FFF06520CA1CD900A7C04D /* MenuViewModel.swift in Sources */,
 				52F0A9AD20D0B6CD00D76AC0 /* CardNavigationViewController.swift in Sources */,
