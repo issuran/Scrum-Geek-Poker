@@ -8,8 +8,6 @@
 
 import UIKit
 
-// TODO 1 : REFATORAR PARA PADRONIZAR MVVM
-
 class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var cardViewModel = CardsViewModel()
@@ -24,7 +22,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
 
         titleCollection.text = cardViewModel.getCollectionSelected()
         
-        self.bottomMenuView.isHidden = true
+        self.bottomMenuView.isHidden = cardViewModel.getBottomMenuVisibility()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,12 +56,28 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     @IBAction func showBottomMenu(_ sender: Any) {
-        if self.bottomMenuView.isHidden {
-                [UIView .transition(with: bottomMenuView, duration: 0.5, options: .transitionCurlDown, animations: {self.bottomMenuView.isHidden = false}, completion: nil)]
+        if cardViewModel.getBottomMenuVisibility() {
+                [UIView .transition(
+                    with: bottomMenuView,
+                    duration: 0.3,
+                    options: .transitionCrossDissolve,
+                    animations: {
+                        self.bottomMenuView.isHidden = false
+                },
+                    completion: nil)]
         }
         else {
-            [UIView .transition(with: bottomMenuView, duration: 0.5, options: .transitionCurlUp, animations: {self.bottomMenuView.isHidden = true}, completion: nil)]
+            [UIView .transition(
+                with: bottomMenuView,
+                duration: 0.3,
+                options: .transitionCrossDissolve,
+                animations: {
+                    self.bottomMenuView.isHidden = true
+            },
+                completion: nil)]
         }
+        
+        cardViewModel.setBottomMenuVisibility()
         
     }
     

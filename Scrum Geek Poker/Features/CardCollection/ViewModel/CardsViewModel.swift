@@ -21,6 +21,7 @@ class CardsViewModel: NSObject {
     private var cardsCollectionType: CardsCollectionChosen
     private var cardCellHeightValue: CGFloat
     private var image: UIImage
+    private var bottomMenuVisibility: Bool
     
     override init() {
         
@@ -30,6 +31,7 @@ class CardsViewModel: NSObject {
         self.cardsCollection = Array<String>()
         self.cardCellHeightValue = 150
         self.image = UIImage(named: "img_back")!
+        self.bottomMenuVisibility = true
         super.init()
         
         updateCardsCollection(cardsType: .fibonacci)
@@ -90,5 +92,13 @@ class CardsViewModel: NSObject {
         case .none:
             return "Fibonacci"
         }
+    }
+    
+    func getBottomMenuVisibility() -> Bool {
+        return self.bottomMenuVisibility
+    }
+    
+    func setBottomMenuVisibility() -> Void {
+        self.bottomMenuVisibility = !self.bottomMenuVisibility
     }
 }
