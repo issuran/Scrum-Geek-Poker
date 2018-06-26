@@ -9,6 +9,8 @@
 import UIKit
 import NotificationCenter
 
+// TODO 3 : RECEBER VALOR DA CARTA SELECIONADA
+
 class CardViewController: UIViewController {
     
     @IBOutlet weak var btnCard: UIButton!

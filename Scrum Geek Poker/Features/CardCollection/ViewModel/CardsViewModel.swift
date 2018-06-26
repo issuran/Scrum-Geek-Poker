@@ -20,6 +20,7 @@ class CardsViewModel: NSObject {
     private var cardsCollection: Array<String>
     private var cardsCollectionType: CardsCollectionChosen
     private var cardCellHeightValue: CGFloat
+    private var image: UIImage
     
     override init() {
         
@@ -28,6 +29,7 @@ class CardsViewModel: NSObject {
         self.cardsCollectionType = .fibonacci
         self.cardsCollection = Array<String>()
         self.cardCellHeightValue = 150
+        self.image = UIImage(named: "img_back")!
         super.init()
         
         updateCardsCollection(cardsType: .fibonacci)
@@ -67,5 +69,26 @@ class CardsViewModel: NSObject {
     
     func setCardCellHeightValue(height: CGFloat) -> Void {
         self.cardCellHeightValue = height
+    }
+    
+    func getCardByIndex(position: Int) -> String {
+        return self.cardsCollection[position]
+    }
+    
+    func getImageBackground() -> UIImage {
+        return image
+    }
+    
+    func getCollectionSelected() -> String {
+        switch self.cardsCollectionType {
+        case .fibonacci:
+            return "Fibonacci"
+            
+        case .shirt:
+            return "T-Shirt"
+            
+        case .none:
+            return "Fibonacci"
+        }
     }
 }
