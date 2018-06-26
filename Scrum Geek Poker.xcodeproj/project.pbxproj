@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5240441920CF3FB300B63FFD /* CardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240441820CF3FB300B63FFD /* CardsCollectionViewController.swift */; };
+		5215DD9020E1B9A3004FA6C5 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5215DD8F20E1B9A3004FA6C5 /* MainScreenViewController.swift */; };
+		5215DD9720E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5215DD9620E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift */; };
 		5240442020CF40C200B63FFD /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240441F20CF40C200B63FFD /* CardsViewModel.swift */; };
-		5240442320CF4EA300B63FFD /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240442120CF4EA300B63FFD /* CardCollectionViewCell.swift */; };
-		5240442420CF4EA300B63FFD /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5240442220CF4EA300B63FFD /* CardCollectionViewCell.xib */; };
 		5253000620C8C19F00B3344C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253000520C8C19F00B3344C /* AppDelegate.swift */; };
 		5253000820C8C19F00B3344C /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253000720C8C19F00B3344C /* CardViewController.swift */; };
 		5253000B20C8C19F00B3344C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5253000920C8C19F00B3344C /* Main.storyboard */; };
 		5253000D20C8C1A000B3344C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5253000C20C8C1A000B3344C /* Assets.xcassets */; };
 		5253001020C8C1A000B3344C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5253000E20C8C1A000B3344C /* LaunchScreen.storyboard */; };
 		5253001A20C8CA4700B3344C /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253001920C8CA4700B3344C /* CardViewModel.swift */; };
+		52F0A9AD20D0B6CD00D76AC0 /* CardNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F0A9AC20D0B6CD00D76AC0 /* CardNavigationViewController.swift */; };
 		52FFF06520CA1CD900A7C04D /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFF06420CA1CD900A7C04D /* MenuViewModel.swift */; };
+		A9457D6264378ED2A68EC0EA /* Pods_Scrum_Geek_Poker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFA5E363AED450679A90496 /* Pods_Scrum_Geek_Poker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5240441820CF3FB300B63FFD /* CardsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewController.swift; sourceTree = "<group>"; };
+		5215DD8F20E1B9A3004FA6C5 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		5215DD9620E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		5240441F20CF40C200B63FFD /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
-		5240442120CF4EA300B63FFD /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		5240442220CF4EA300B63FFD /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		5253000220C8C19F00B3344C /* Scrum Geek Poker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scrum Geek Poker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5253000520C8C19F00B3344C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5253000720C8C19F00B3344C /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +33,11 @@
 		5253000F20C8C1A000B3344C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5253001120C8C1A000B3344C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5253001920C8CA4700B3344C /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		52F0A9AC20D0B6CD00D76AC0 /* CardNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNavigationViewController.swift; sourceTree = "<group>"; };
 		52FFF06420CA1CD900A7C04D /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		752B65DEEB9D0809150D3D54 /* Pods-Scrum Geek Poker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrum Geek Poker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scrum Geek Poker/Pods-Scrum Geek Poker.release.xcconfig"; sourceTree = "<group>"; };
+		B94D37EE294AF8DDD4BD303B /* Pods-Scrum Geek Poker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrum Geek Poker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scrum Geek Poker/Pods-Scrum Geek Poker.debug.xcconfig"; sourceTree = "<group>"; };
+		CFFA5E363AED450679A90496 /* Pods_Scrum_Geek_Poker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrum_Geek_Poker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9457D6264378ED2A68EC0EA /* Pods_Scrum_Geek_Poker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5215DD9120E1BDBF004FA6C5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5215DD9620E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		5240441A20CF404600B63FFD /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +98,8 @@
 		5240441E20CF409800B63FFD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5240441820CF3FB300B63FFD /* CardsCollectionViewController.swift */,
-				5240442120CF4EA300B63FFD /* CardCollectionViewCell.swift */,
-				5240442220CF4EA300B63FFD /* CardCollectionViewCell.xib */,
+				5215DD9120E1BDBF004FA6C5 /* Cell */,
+				5215DD8F20E1B9A3004FA6C5 /* MainScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +115,7 @@
 		5253000420C8C19F00B3344C /* Scrum Geek Poker */ = {
 			isa = PBXGroup;
 			children = (
+				52F0A9AB20D0B1AC00D76AC0 /* Navigation */,
 				5240441A20CF404600B63FFD /* Features */,
 				5253000520C8C19F00B3344C /* AppDelegate.swift */,
 				5253000920C8C19F00B3344C /* Main.storyboard */,
@@ -135,7 +148,34 @@
 			children = (
 				5253000420C8C19F00B3344C /* Scrum Geek Poker */,
 				5253000320C8C19F00B3344C /* Products */,
+				D0AD35380626C2AC952A6DD4 /* Pods */,
+				7393D61606256159D7092958 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		52F0A9AB20D0B1AC00D76AC0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				52F0A9AC20D0B6CD00D76AC0 /* CardNavigationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		7393D61606256159D7092958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFFA5E363AED450679A90496 /* Pods_Scrum_Geek_Poker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0AD35380626C2AC952A6DD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B94D37EE294AF8DDD4BD303B /* Pods-Scrum Geek Poker.debug.xcconfig */,
+				752B65DEEB9D0809150D3D54 /* Pods-Scrum Geek Poker.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5253001420C8C1A000B3344C /* Build configuration list for PBXNativeTarget "Scrum Geek Poker" */;
 			buildPhases = (
+				0CBF7A393066B85CFE3460CE /* [CP] Check Pods Manifest.lock */,
 				5253FFFE20C8C19F00B3344C /* Sources */,
 				5253FFFF20C8C19F00B3344C /* Frameworks */,
 				5253000020C8C19F00B3344C /* Resources */,
@@ -196,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5240442420CF4EA300B63FFD /* CardCollectionViewCell.xib in Resources */,
 				5253001020C8C1A000B3344C /* LaunchScreen.storyboard in Resources */,
 				5253000D20C8C1A000B3344C /* Assets.xcassets in Resources */,
 				5253000B20C8C19F00B3344C /* Main.storyboard in Resources */,
@@ -205,6 +245,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CBF7A393066B85CFE3460CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scrum Geek Poker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5253FFFE20C8C19F00B3344C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -212,11 +273,12 @@
 			files = (
 				5253000820C8C19F00B3344C /* CardViewController.swift in Sources */,
 				5253000620C8C19F00B3344C /* AppDelegate.swift in Sources */,
+				5215DD9020E1B9A3004FA6C5 /* MainScreenViewController.swift in Sources */,
 				5240442020CF40C200B63FFD /* CardsViewModel.swift in Sources */,
 				5253001A20C8CA4700B3344C /* CardViewModel.swift in Sources */,
-				5240442320CF4EA300B63FFD /* CardCollectionViewCell.swift in Sources */,
+				5215DD9720E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift in Sources */,
 				52FFF06520CA1CD900A7C04D /* MenuViewModel.swift in Sources */,
-				5240441920CF3FB300B63FFD /* CardsCollectionViewController.swift in Sources */,
+				52F0A9AD20D0B6CD00D76AC0 /* CardNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +420,7 @@
 		};
 		5253001520C8C1A000B3344C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B94D37EE294AF8DDD4BD303B /* Pods-Scrum Geek Poker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +439,7 @@
 		};
 		5253001620C8C1A000B3344C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 752B65DEEB9D0809150D3D54 /* Pods-Scrum Geek Poker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
