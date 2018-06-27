@@ -43,11 +43,11 @@ class CardsViewModel: NSObject {
         switch cardsType {
         case .fibonacci:
             self.cardsCollectionType = .fibonacci
-            self.cardsCollection = ["1","2","3","5","8","13","21","34","55","89","infinity","coffee"]
+            self.cardsCollection = ["1", "2", "3", "5", "8", "13", "21", "34", "55", "89", "infinity", "?", "coffee"]
             
         case .shirt:
             self.cardsCollectionType = .shirt
-            self.cardsCollection = ["XS","S","M","L","XL","XXL","XXXL","infinity","coffee"]
+            self.cardsCollection = ["XS", "S", "M", "L", "XL", "XXL", "XXXL", "infinity", "?", "coffee"]
             
         default:
             self.cardsCollectionType = .none

@@ -13,10 +13,15 @@ class MainScreenCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardValue: UILabel!
     @IBOutlet weak var cardImgBackground: UIImageView!
+    @IBOutlet weak var cardImageValue: UIImageView!
     
-    func displayContent(image: UIImage, title: String){
-        cardValue.text = title
+    func displayContent(image: UIImage, title: String, cardImage: String){
         cardImgBackground.image = image
+        if cardImage == "" {
+            cardValue.text = title
+        } else {
+            cardImageValue.image = UIImage(named: cardImage)
+        }        
     }
     
 }
