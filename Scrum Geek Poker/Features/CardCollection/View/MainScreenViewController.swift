@@ -40,7 +40,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         
         let card = cardViewModel.getCardByIndex(position: indexPath.row)
         
-        cell.displayContent(image: cardViewModel.getImageBackground(), title: card.value)
+        cell.displayContent(image: cardViewModel.getImageBackground(), title: card.value, cardImage: card.valueImage)
         
         return cell
     }
