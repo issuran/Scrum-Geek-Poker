@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5215DD9020E1B9A3004FA6C5 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5215DD8F20E1B9A3004FA6C5 /* MainScreenViewController.swift */; };
 		5215DD9720E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5215DD9620E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift */; };
+		5219F2CB20E30F3C0012999C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219F2CA20E30F3C0012999C /* Card.swift */; };
 		5240442020CF40C200B63FFD /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240441F20CF40C200B63FFD /* CardsViewModel.swift */; };
 		5253000620C8C19F00B3344C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253000520C8C19F00B3344C /* AppDelegate.swift */; };
 		5253000820C8C19F00B3344C /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253000720C8C19F00B3344C /* CardViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		5215DD8F20E1B9A3004FA6C5 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		5215DD9620E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		5219F2CA20E30F3C0012999C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		5240441F20CF40C200B63FFD /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
 		5253000220C8C19F00B3344C /* Scrum Geek Poker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scrum Geek Poker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5253000520C8C19F00B3344C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 				5215DD9620E1BE51004FA6C5 /* MainScreenCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5219F2C920E30F250012999C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5219F2CA20E30F3C0012999C /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5240441A20CF404600B63FFD /* Features */ = {
@@ -115,6 +125,7 @@
 		5253000420C8C19F00B3344C /* Scrum Geek Poker */ = {
 			isa = PBXGroup;
 			children = (
+				5219F2C920E30F250012999C /* Model */,
 				52F0A9AB20D0B1AC00D76AC0 /* Navigation */,
 				5240441A20CF404600B63FFD /* Features */,
 				5253000520C8C19F00B3344C /* AppDelegate.swift */,
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5253000820C8C19F00B3344C /* CardViewController.swift in Sources */,
+				5219F2CB20E30F3C0012999C /* Card.swift in Sources */,
 				5253000620C8C19F00B3344C /* AppDelegate.swift in Sources */,
 				5215DD9020E1B9A3004FA6C5 /* MainScreenViewController.swift in Sources */,
 				5240442020CF40C200B63FFD /* CardsViewModel.swift in Sources */,

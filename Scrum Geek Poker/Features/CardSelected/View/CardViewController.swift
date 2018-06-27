@@ -9,8 +9,6 @@
 import UIKit
 import NotificationCenter
 
-// TODO 3 : RECEBER VALOR DA CARTA SELECIONADA
-
 class CardViewController: UIViewController {
     
     @IBOutlet weak var btnCard: UIButton!
@@ -38,9 +36,19 @@ class CardViewController: UIViewController {
     
     @IBAction func flipCard(_ sender: Any) {
         
+        if cardViewModel.isCardOpen() {
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let destination = storyboard.instantiateViewController(withIdentifier: "mainBoard") as! MainScreenViewController
+        
+            present(destination, animated: true, completion: nil)
+        }
         cardViewModel.flipCardToDisplay()
     
-        btnCard.setImage(cardViewModel.getImageToDisplay(), for: .normal)
+        btnCard.setBackgroundImage(cardViewModel.getImageToDisplay(), for: .normal)
+        
+        btnCard.setImage(cardViewModel.getCardValueImageToDisplay(), for: .normal)
+        
+        btnCard.setTitle(cardViewModel.getTextToDisplay(), for: .normal)
         
         UIView.transition(with: btnCard, duration: cardViewModel.getDurationOfTransition(), options: cardViewModel.getMovementAnimation(), animations: nil, completion: nil)
     }

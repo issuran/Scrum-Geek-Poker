@@ -14,7 +14,7 @@
         <!--Main Screen View Controller-->
         <scene sceneID="CH2-vG-hkm">
             <objects>
-                <viewController id="9bh-0S-W7D" customClass="MainScreenViewController" customModule="Scrum_Geek_Poker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainBoard" id="9bh-0S-W7D" customClass="MainScreenViewController" customModule="Scrum_Geek_Poker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yJW-EM-uKD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +162,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="swk-Vm-GZa" secondAttribute="height" multiplier="250:364" id="Iw4-wZ-0uu"/>
                                         </constraints>
-                                        <state key="normal" image="back_card"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                        <state key="normal" backgroundImage="back_card">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6eh-SC-1bN"/>
                                         </connections>
