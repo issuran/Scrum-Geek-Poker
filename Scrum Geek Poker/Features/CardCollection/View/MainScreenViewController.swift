@@ -38,19 +38,20 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! MainScreenCollectionViewCell
         
-        let cardValue = cardViewModel.getCardByIndex(position: indexPath.row)
+        let card = cardViewModel.getCardByIndex(position: indexPath.row)
         
-        cell.displayContent(image: cardViewModel.getImageBackground(), title: cardValue)
+        cell.displayContent(image: cardViewModel.getImageBackground(), title: card.value)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        // TODO 2 : PASSAR QUAL CARTA FOI SELECIONADA
-        
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let destination = storyboard.instantiateViewController(withIdentifier: "cardToDisplay") as! CardViewController
+        
+        destination.cardViewModel.setCardToDisplay(card: cardViewModel.getCardByIndex(position: indexPath.row))
+        
         present(destination, animated: true, completion: nil)
 
     }

@@ -22,6 +22,7 @@ class CardsViewModel: NSObject {
     private var cardCellHeightValue: CGFloat
     private var image: UIImage
     private var bottomMenuVisibility: Bool
+    private var imageUri: String
     
     override init() {
         
@@ -30,6 +31,7 @@ class CardsViewModel: NSObject {
         self.cardsCollectionType = .fibonacci
         self.cardsCollection = Array<String>()
         self.cardCellHeightValue = 150
+        self.imageUri = "img_back"
         self.image = UIImage(named: "img_back")!
         self.bottomMenuVisibility = true
         super.init()
@@ -73,8 +75,24 @@ class CardsViewModel: NSObject {
         self.cardCellHeightValue = height
     }
     
-    func getCardByIndex(position: Int) -> String {
-        return self.cardsCollection[position]
+    func getCardByIndex(position: Int) -> Card {
+        var cardValueImage = ""
+        let cardValue = self.cardsCollection[position]
+        
+        switch cardValue {
+        case "infinity":
+            cardValueImage = "infinity"
+        case "coffee":
+            cardValueImage = "coffee"
+        default:
+            cardValueImage = ""
+        }
+        
+        return Card(
+            cardValue: cardValue,
+            cardImageBackground: self.imageUri,
+            cardValueImage: cardValueImage,
+            isImageCard: cardValueImage == "" ? false : true)
     }
     
     func getImageBackground() -> UIImage {
