@@ -98,6 +98,8 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     func reloadCards() {
         collectionView.reloadData()
+        
+        titleCollection.text = cardViewModel.getCollectionSelected()
     }
     
     @IBAction func showBottomMenu(_ sender: Any) {

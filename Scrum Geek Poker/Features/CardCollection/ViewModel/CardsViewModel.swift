@@ -82,12 +82,12 @@ class CardsViewModel: NSObject {
         let cardValue = self.cardsCollection[position]
         
         switch cardValue {
-        case "infinity":
-            cardValueImage = "infinity"
-        case "coffee":
-            cardValueImage = "coffee"
-        default:
-            cardValueImage = ""
+            case "infinity":
+                cardValueImage = "infinity"
+            case "coffee":
+                cardValueImage = "coffee"
+            default:
+                cardValueImage = ""
         }
         
         return Card(

@@ -17,8 +17,12 @@ class MainScreenCollectionViewCell: UICollectionViewCell {
     
     func displayContent(image: UIImage, title: String, cardImage: String){
         cardImgBackground.image = image
+        cardImageValue.image = nil
+        cardValue.text = ""
         if cardImage == "" {
-            cardValue.text = title
+            cardValue.text = title            
+            cardValue.adjustsFontSizeToFitWidth = true;
+            cardValue.minimumScaleFactor = 0.5
         } else {
             cardImageValue.image = UIImage(named: cardImage)
         }        
