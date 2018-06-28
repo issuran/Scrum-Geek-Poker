@@ -13,21 +13,26 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     var cardViewModel = CardsViewModel()
     var menuViewModel = BottomMenuViewModel()
     
-    @IBOutlet weak var titleCollection: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomMenu: UIButton!
     @IBOutlet weak var bottomMenuView: UIView!
     @IBOutlet weak var bottomMenuCollectionView: UICollectionView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleCollection.text = cardViewModel.getCollectionSelected()
-        
-        self.bottomMenuView.isHidden = cardViewModel.getBottomMenuVisibility()
+        self.loadData()
     }
 
+    func loadData() -> Void {
+        
+        
+        self.title = cardViewModel.getCollectionSelected()
+        
+        self.bottomMenuView.isHidden = cardViewModel.getBottomMenuVisibility()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -99,7 +104,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     func reloadCards() {
         collectionView.reloadData()
         
-        titleCollection.text = cardViewModel.getCollectionSelected()
+        self.title = cardViewModel.getCollectionSelected()
     }
     
     @IBAction func showBottomMenu(_ sender: Any) {

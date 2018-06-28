@@ -79,6 +79,10 @@ class CardViewModel: NSObject {
         return isOpen
     }
     
+    func getChosenCardCollection() -> String {
+        return chosenCard.typeCollection
+    }
+    
     func setCardToDisplay(card: Card) -> Void {
         self.cardValue = card.value
         self.cardImageBackgroundValue = card.backgroundImage

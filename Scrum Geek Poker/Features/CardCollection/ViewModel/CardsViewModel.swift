@@ -94,7 +94,8 @@ class CardsViewModel: NSObject {
             cardValue: cardValue,
             cardImageBackground: self.imageUri,
             cardValueImage: cardValueImage,
-            isImageCard: cardValueImage == "" ? false : true)
+            isImageCard: cardValueImage == "" ? false : true,
+            typeCollection: getCollectionSelected())
     }
     
     func getImageBackground() -> UIImage {
@@ -124,6 +125,19 @@ class CardsViewModel: NSObject {
     
     func setSelectedCollection(position: Int) -> Void {
         switch CardsCollectionChosen.cardCollectionValues[position].rawValue {
+        case "Fibonacci":
+            self.cardsCollectionType = .fibonacci
+        case "T-shirt":
+            self.cardsCollectionType = .shirt
+        default:
+            self.cardsCollectionType = .none
+        }
+        
+        updateCardsCollection()
+    }
+    
+    func setSelectedCollectionByName(collection: String) -> Void {
+        switch collection {
         case "Fibonacci":
             self.cardsCollectionType = .fibonacci
         case "T-shirt":

@@ -13,12 +13,14 @@ struct Card {
     let valueImage: String
     let backgroundImage: String
     let isImageCard: Bool
+    let typeCollection: String
     
-    init(cardValue: String, cardImageBackground: String, cardValueImage: String, isImageCard: Bool) {
+    init(cardValue: String, cardImageBackground: String, cardValueImage: String, isImageCard: Bool, typeCollection: String) {
         self.value = cardValue
         self.backgroundImage = cardImageBackground
         self.valueImage = cardValueImage
         self.isImageCard = isImageCard
+        self.typeCollection = typeCollection
     }
     
     init() {
@@ -26,5 +28,6 @@ struct Card {
         self.backgroundImage = "img_back"
         self.valueImage = ""
         self.isImageCard = false
+        self.typeCollection = "Fibonacci"
     }
 }
