@@ -8,10 +8,12 @@
 
 import UIKit
 
-enum CardsCollectionChosen {
-    case fibonacci
-    case shirt
-    case none
+enum CardsCollectionChosen: String {
+    case fibonacci = "Fibonacci"
+    case shirt = "T-shirt"
+    case none = "none"
+    
+    static let cardCollectionValues = [fibonacci, shirt, none]
 }
 
 class CardsViewModel: NSObject {
@@ -36,11 +38,11 @@ class CardsViewModel: NSObject {
         self.bottomMenuVisibility = true
         super.init()
         
-        updateCardsCollection(cardsType: .fibonacci)
+        updateCardsCollection()
     }
     
-    func updateCardsCollection(cardsType : CardsCollectionChosen) -> Void {
-        switch cardsType {
+    func updateCardsCollection() -> Void {
+        switch cardsCollectionType {
         case .fibonacci:
             self.cardsCollectionType = .fibonacci
             self.cardsCollection = ["1", "2", "3", "5", "8", "13", "21", "34", "55", "89", "infinity", "?", "coffee"]
@@ -80,19 +82,20 @@ class CardsViewModel: NSObject {
         let cardValue = self.cardsCollection[position]
         
         switch cardValue {
-        case "infinity":
-            cardValueImage = "infinity"
-        case "coffee":
-            cardValueImage = "coffee"
-        default:
-            cardValueImage = ""
+            case "infinity":
+                cardValueImage = "infinity"
+            case "coffee":
+                cardValueImage = "coffee"
+            default:
+                cardValueImage = ""
         }
         
         return Card(
             cardValue: cardValue,
             cardImageBackground: self.imageUri,
             cardValueImage: cardValueImage,
-            isImageCard: cardValueImage == "" ? false : true)
+            isImageCard: cardValueImage == "" ? false : true,
+            typeCollection: getCollectionSelected())
     }
     
     func getImageBackground() -> UIImage {
@@ -118,5 +121,31 @@ class CardsViewModel: NSObject {
     
     func setBottomMenuVisibility() -> Void {
         self.bottomMenuVisibility = !self.bottomMenuVisibility
+    }
+    
+    func setSelectedCollection(position: Int) -> Void {
+        switch CardsCollectionChosen.cardCollectionValues[position].rawValue {
+        case "Fibonacci":
+            self.cardsCollectionType = .fibonacci
+        case "T-shirt":
+            self.cardsCollectionType = .shirt
+        default:
+            self.cardsCollectionType = .none
+        }
+        
+        updateCardsCollection()
+    }
+    
+    func setSelectedCollectionByName(collection: String) -> Void {
+        switch collection {
+        case "Fibonacci":
+            self.cardsCollectionType = .fibonacci
+        case "T-shirt":
+            self.cardsCollectionType = .shirt
+        default:
+            self.cardsCollectionType = .none
+        }
+        
+        updateCardsCollection()
     }
 }

@@ -11,49 +11,100 @@ import UIKit
 class MainScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var cardViewModel = CardsViewModel()
+    var menuViewModel = BottomMenuViewModel()
     
-    @IBOutlet weak var titleCollection: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomMenu: UIButton!
     @IBOutlet weak var bottomMenuView: UIView!
+    @IBOutlet weak var bottomMenuCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        titleCollection.text = cardViewModel.getCollectionSelected()
         
-        self.bottomMenuView.isHidden = cardViewModel.getBottomMenuVisibility()
+        self.loadData()
     }
 
+    func loadData() -> Void {
+        
+        
+        self.title = cardViewModel.getCollectionSelected()
+        
+        self.bottomMenuView.isHidden = cardViewModel.getBottomMenuVisibility()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.collectionView {
+            return cardViewModel.getNumberOfItemsInSection()
+        } else if collectionView == self.bottomMenuCollectionView {
+            return menuViewModel.getNumberOfItemsInSection()
+        }
         
-        return cardViewModel.getNumberOfItemsInSection()
+        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! MainScreenCollectionViewCell
+        if collectionView == self.collectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! MainScreenCollectionViewCell
+            
+            let card = cardViewModel.getCardByIndex(position: indexPath.row)
+            
+            cell.displayContent(image: cardViewModel.getImageBackground(), title: card.value, cardImage: card.valueImage)
+            
+            return cell
+        }
         
-        let card = cardViewModel.getCardByIndex(position: indexPath.row)
+        else if collectionView == self.bottomMenuCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bottomMenuCollectionViewCell", for: indexPath) as! BottomMenuCollectionViewCell
+            
+            cell.displayContent(image: menuViewModel
+                .getImageItemMenu(position: indexPath.row), title: menuViewModel.getTitleItemMenu(position: indexPath.row))
+            
+            return cell
+        }
         
-        cell.displayContent(image: cardViewModel.getImageBackground(), title: card.value, cardImage: card.valueImage)
+        return UICollectionViewCell.init()
         
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let destination = storyboard.instantiateViewController(withIdentifier: "cardToDisplay") as! CardViewController
-        
-        destination.cardViewModel.setCardToDisplay(card: cardViewModel.getCardByIndex(position: indexPath.row))
-        
-        present(destination, animated: true, completion: nil)
+        if collectionView == self.collectionView {
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let destination = storyboard.instantiateViewController(withIdentifier: "cardToDisplay") as! CardViewController
+            
+            destination.cardViewModel.setCardToDisplay(card: cardViewModel.getCardByIndex(position: indexPath.row))
+            
+            present(destination, animated: true, completion: nil)
 
+        } else if collectionView == self.bottomMenuCollectionView {
+            [UIView .transition(
+                with: bottomMenuView,
+                duration: 0.3,
+                options: .transitionCrossDissolve,
+                animations: {
+                    self.bottomMenuView.isHidden = true
+            },
+                completion: nil)]
+            
+            cardViewModel.setSelectedCollection(position: indexPath.row)
+            
+            reloadCards()
+            
+            cardViewModel.setBottomMenuVisibility()
+            
+        }
+    }
+    
+    func reloadCards() {
+        collectionView.reloadData()
+        
+        self.title = cardViewModel.getCollectionSelected()
     }
     
     @IBAction func showBottomMenu(_ sender: Any) {
