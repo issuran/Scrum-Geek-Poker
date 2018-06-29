@@ -26,7 +26,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
 
     func loadData() -> Void {
         
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.title = cardViewModel.getCollectionSelected()
         
         self.bottomMenuView.isHidden = cardViewModel.getBottomMenuVisibility()
