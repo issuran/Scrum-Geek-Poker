@@ -10,7 +10,7 @@ import UIKit
 
 enum CardsCollectionChosen: String {
     case fibonacci = "Fibonacci"
-    case shirt = "T-shirt"
+    case shirt = "T-Shirt"
     case none = "none"
     
     static let cardCollectionValues = [fibonacci, shirt, none]
@@ -127,7 +127,7 @@ class CardsViewModel: NSObject {
         switch CardsCollectionChosen.cardCollectionValues[position].rawValue {
         case "Fibonacci":
             self.cardsCollectionType = .fibonacci
-        case "T-shirt":
+        case "T-Shirt":
             self.cardsCollectionType = .shirt
         default:
             self.cardsCollectionType = .none
@@ -140,7 +140,7 @@ class CardsViewModel: NSObject {
         switch collection {
         case "Fibonacci":
             self.cardsCollectionType = .fibonacci
-        case "T-shirt":
+        case "T-Shirt":
             self.cardsCollectionType = .shirt
         default:
             self.cardsCollectionType = .none

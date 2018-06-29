@@ -40,11 +40,12 @@ class CardViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let destination = storyboard.instantiateViewController(withIdentifier: "mainBoard") as! MainScreenViewController
 
-            // TODO : MAKE MAIN GET NEW COLLECTION SO WHEN I BACK SHOULD DISPLAY NEW COLLECTION
-            // TODO : DISPLAY NAVIGATION BAR
             destination.cardViewModel.setSelectedCollectionByName(collection: cardViewModel.getChosenCardCollection())
-        
-            present(destination, animated: true, completion: nil)
+            
+            let navEditorViewController: UINavigationController = UINavigationController(rootViewController: destination)
+            
+            present(navEditorViewController, animated: true, completion: nil)
+            
         }
         cardViewModel.flipCardToDisplay()
     
