@@ -257,11 +257,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="dGZ-7A-4tQ">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="fZb-pP-lgf">
-                            <connections>
-                                <action selector="openMenu:" destination="BYZ-38-t0r" id="xPs-7W-g4H"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="fZb-pP-lgf"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnCard" destination="swk-Vm-GZa" id="IFT-ig-B0A"/>
