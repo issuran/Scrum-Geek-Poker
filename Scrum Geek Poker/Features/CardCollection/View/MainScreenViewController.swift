@@ -115,8 +115,14 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
                     options: .transitionCrossDissolve,
                     animations: {
                         self.bottomMenuView.isHidden = false
+                        
+                        // Turn UIButton upside down
+                        self.bottomMenu.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
                 },
                     completion: nil)]
+            
+            
+            
         }
         else {
             [UIView .transition(
@@ -125,6 +131,9 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
                 options: .transitionCrossDissolve,
                 animations: {
                     self.bottomMenuView.isHidden = true
+                    
+                    // Turn UIButton back to normal
+                    self.bottomMenu.transform = CGAffineTransform(rotationAngle: 0)
             },
                 completion: nil)]
         }
