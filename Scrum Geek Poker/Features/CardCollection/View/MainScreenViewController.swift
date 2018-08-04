@@ -83,21 +83,20 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
             present(destination, animated: true, completion: nil)
 
         } else if collectionView == self.bottomMenuCollectionView {
-            UIView .transition(
+            _ = [UIView .transition(
                 with: bottomMenuView,
                 duration: 0.3,
                 options: .transitionCrossDissolve,
                 animations: {
                     self.bottomMenuView.isHidden = true
             },
-                completion: nil)
+                completion: nil)]
             
             cardViewModel.setSelectedCollection(position: indexPath.row)
             
             reloadCards()
             
             cardViewModel.setBottomMenuVisibility()
-            
         }
     }
     
@@ -109,7 +108,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBAction func showBottomMenu(_ sender: Any) {
         if cardViewModel.getBottomMenuVisibility() {
-                UIView .transition(
+                _ = [UIView .transition(
                     with: bottomMenuView,
                     duration: 0.3,
                     options: .transitionCrossDissolve,
@@ -119,10 +118,10 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
                         // Turn UIButton upside down
                         self.bottomMenu.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
                 },
-                    completion: nil)
+                    completion: nil)]
         }
         else {
-            UIView .transition(
+            _ = [UIView .transition(
                 with: bottomMenuView,
                 duration: 0.3,
                 options: .transitionCrossDissolve,
@@ -132,7 +131,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDataSource, UI
                     // Turn UIButton back to normal
                     self.bottomMenu.transform = CGAffineTransform(rotationAngle: 0)
             },
-                completion: nil)
+                completion: nil)]
         }
         
         cardViewModel.setBottomMenuVisibility()
